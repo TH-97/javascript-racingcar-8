@@ -1,5 +1,9 @@
+import racingCarController from "./page/racingCarController.js";
+
 class App {
-  async run() {}
+  async run() {
+    await racingCarController();
+  }
 }
 
 export default App;
