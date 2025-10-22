@@ -19,10 +19,6 @@ describe("output 테스트", () => {
     await app.run();
 
     // then
-    expect(logSpy).toHaveBeenCalledWith(
-      expect.stringContaining(
-        "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"
-      )
-    );
+    expect(logSpy).toHaveBeenCalledWith(expect.stringContaining(log));
   });
 });
