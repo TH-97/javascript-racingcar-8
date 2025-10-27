@@ -13,7 +13,6 @@ export function outputResultMessage() {
   Console.print(`\n${INFORM_MESSAGE.RACE_RESULTS}`);
 }
 export function outputWinnerMessage(winnerArray) {
-  // Console.print("");
   var winnerMessage = `${INFORM_MESSAGE.FINAL_WINNER} : `;
   for (let i = 0; i < winnerArray.length; i++) {
     if (i === winnerArray.length - 1) {
