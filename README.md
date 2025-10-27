@@ -35,9 +35,51 @@
 - [x] 우승자가 여러 명일 경우 쉼표(,)를 이용하여 구분한다.
 - [x] 사용자가 잘못된 값을 입력할 경우 "[ERROR]"로 시작하는 메시지와 함께 Error를 발생시킨 후 애플리케이션은 종료되어야 한다.
 
-## 함수
+## 파일 구조
 
-## 디렉토리 구조
+```
+./src
+├── App.js
+├── entites
+│   └── race
+│       ├── index.js
+│       ├── lib
+│       │   ├── canMove.js
+│       │   └── mergeSort.js
+│       └── model
+│           └── race.js
+├── features
+│   ├── getRandomNumberArray
+│   │   ├── getRandomNumberArray
+│   │   │   └── getRandomNumberArray.js
+│   │   └── index.js
+│   ├── input
+│   │   ├── index.js
+│   │   └── inputValues
+│   │       └── inputValues.js
+│   ├── output
+│   │   ├── index.js
+│   │   ├── outputGuideMessage
+│   │   │   └── outputGuideMessage.js
+│   │   └── outputRaceResult
+│   │       └── outputRaceResult.js
+│   ├── parse
+│   │   ├── index.js
+│   │   └── parseInput
+│   │       └── parseInput.js
+│   └── validator
+│       ├── index.js
+│       └── validator
+│           ├── valitdateAttemptCount.js
+│           └── valitdateCarName.js
+├── index.js
+├── page
+│   └── racingCarController.js
+└── shard
+    ├── constants
+    │   └── constants.js
+    └── index.js
+```
 
 ## 프로그래밍 요구 사항
 
