@@ -23,14 +23,15 @@ export default async function racingCarController() {
   outputAttemptMessage();
 
   const carNameArray = await parseInput(inputCarName);
-
   const attemptCount = await inputValues();
 
   valitdateAttemptCount(attemptCount);
 
   const race = new Race(carNameArray);
   outputResultMessage();
+
   startRace(carNameArray, race, attemptCount);
+
   const winnerArray = await race.getFinalWinner();
   outputWinnerMessage(winnerArray);
 }
