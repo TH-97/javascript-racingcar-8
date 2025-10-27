@@ -30,12 +30,12 @@ export default async function racingCarController() {
 
   const race = new Race(carNameArray);
   outputResultMessage();
-  startRace(carNameArray, race);
+  startRace(carNameArray, race, attemptCount);
   const winnerArray = await race.getFinalWinner();
   outputWinnerMessage(winnerArray);
 }
 
-function startRace(carNameArray, race) {
+function startRace(carNameArray, race, attemptCount) {
   for (let i = 0; i < attemptCount; i++) {
     const randomNumberArray = getRandomNumberArray(carNameArray.length);
     race.palyRound(randomNumberArray);

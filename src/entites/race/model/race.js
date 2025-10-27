@@ -1,5 +1,5 @@
 import { mergeSort } from "../lib/mergeSort.js";
-import { move } from "../lib/move.js";
+import { canMove } from "../lib/canMove.js";
 
 export class Race {
   constructor(carNameArray) {
@@ -9,7 +9,7 @@ export class Race {
 
   palyRound(randomNumberArray) {
     for (let i = 0; i < randomNumberArray.length; i++) {
-      if (move(randomNumberArray[i])) this.state[i] += "-";
+      if (canMove(randomNumberArray[i])) this.state[i] += "-";
     }
   }
   getState() {

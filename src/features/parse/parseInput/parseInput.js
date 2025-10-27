@@ -1,3 +1,3 @@
-function parseInput(input) {
+export function parseInput(input) {
   return input.split(",");
 }
