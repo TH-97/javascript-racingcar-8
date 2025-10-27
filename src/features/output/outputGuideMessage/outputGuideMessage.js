@@ -1,21 +1,20 @@
 import { Console } from "@woowacourse/mission-utils";
+import { INFORM_MESSAGE } from "../../../shard/index.js";
 
 export function outputGuideMessage() {
-  Console.print(
-    "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)"
-  );
+  Console.print(INFORM_MESSAGE.ENTER_CAR_NAMES);
 }
 
 export function outputAttemptMessage() {
-  Console.print("시도할 횟수는 몇 회인가요?");
+  Console.print(INFORM_MESSAGE.ENTER_ATTEMPTS);
 }
 
 export function outputResultMessage() {
-  Console.print("\n실행 결과");
+  Console.print(`\n${INFORM_MESSAGE.RACE_RESULTS}`);
 }
 export function outputWinnerMessage(winnerArray) {
   // Console.print("");
-  var winnerMessage = "최종 우승자 : ";
+  var winnerMessage = `${INFORM_MESSAGE.FINAL_WINNER} : `;
   for (let i = 0; i < winnerArray.length; i++) {
     if (i === winnerArray.length - 1) {
       winnerMessage = winnerMessage + `${winnerArray[i]}`;

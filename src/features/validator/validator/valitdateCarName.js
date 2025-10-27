@@ -1,8 +1,9 @@
+import { ERROR_MESSAGE } from "../../../shard/index.js";
+
 export function valitdateCarName(input) {
-  if (isEmpty(input)) throw new Error("[ERROR] 입력값이 공백입니다");
-  if (checkCarNameLength(input))
-    throw new Error("[ERROR] 차의 이름은 5자 이하만 가능");
-  if (checkDuplicateNames(input)) throw new Error("[ERROR] 중복된 이름 불가능");
+  if (isEmpty(input)) throw new Error(ERROR_MESSAGE.EMPTY_INPUT);
+  if (checkCarNameLength(input)) throw new Error(ERROR_MESSAGE.NAME_TOO_LONG);
+  if (checkDuplicateNames(input)) throw new Error(ERROR_MESSAGE.DUPLICATE_NAME);
 }
 
 function isEmpty(input) {
